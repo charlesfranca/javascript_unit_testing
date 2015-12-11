@@ -2,7 +2,8 @@ describe("first test with jasmine-jquery", function(){
 	var $el;
 
 	beforeEach(function(){
-		jasmine.getFixtures().fixturesPath = 'spec/fixtures/'
+		jasmine.getFixtures().fixturesPath = 'spec/fixtures/';
+		loadFixtures('init.html');
 		$el = $("<div></div>");
 	})
 
@@ -29,6 +30,6 @@ describe("first test with jasmine-jquery", function(){
 		$.ajax.calls.mostRecent().args[0].success('<p>teste</p>');
 
 		expect($el).toHaveClass('sandbox')
-		expect($el.find('p').length).toEqual(1)
+		expect($el.find('div').length).toEqual(1)
 	})
 })
