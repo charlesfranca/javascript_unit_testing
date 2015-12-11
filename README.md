@@ -1,6 +1,6 @@
 # Requisitos
 
-É necessário que você tenha o node e bower instalados instalados.
+É necessário que você tenha o node e bower instalados.
 
 # Intruções
 
