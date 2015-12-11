@@ -1,0 +1,22 @@
+{
+  "name": "unit_testing_javascript",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "charles dos santos frança"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jasmine-jquery": "~2.1.1"
+  }
+}
