@@ -1,35 +1,13 @@
 describe("first test with jasmine-jquery", function(){
-	var $el;
-
 	beforeEach(function(){
 		jasmine.getFixtures().fixturesPath = 'spec/fixtures/';
 		loadFixtures('init.html');
-		$el = $("<div></div>");
-	})
+	});
 
-	function callAjax(){
-		$.ajax({
-			url: "teste",
-			data: function(){
-
-			},
-			success:function(data){
-				$el.html(data)
-			}, error: function(){
-
-			}
-		});
-	}
-
-	it("should get div text", function(){
-		$el.addClass('sandbox');
+	it("should p be appended to div.sandbox", function(){
 		spyOn($, "ajax");
-
-		callAjax();
-
+		bpf.callAjax();
 		$.ajax.calls.mostRecent().args[0].success('<p>teste</p>');
-
-		expect($el).toHaveClass('sandbox')
-		expect($el.find('div').length).toEqual(1)
-	})
-})
+		expect($('.sandbox').find('p').length).toEqual(1)
+	});
+});
